@@ -21,8 +21,8 @@ public class UserResource {
 	
 	@GetMapping
 	public ResponseEntity<List<User>> findAll(){
-		List<User> list = userService.findAll();
-		return ResponseEntity.ok().body(list);
+		List<User> usersList = userService.findAll();
+		return ResponseEntity.ok().body(usersList);
 	}
 	
 	@GetMapping(value = "/{id}")
