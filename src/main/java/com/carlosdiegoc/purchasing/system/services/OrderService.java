@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.carlosdiegoc.purchasing.system.entities.Order;
-import com.carlosdiegoc.purchasing.system.entities.User;
 import com.carlosdiegoc.purchasing.system.repositories.OrderRepository;
 
 @Service
@@ -21,7 +20,7 @@ public class OrderService {
 	}
 	
 	public Order findById(Long id) {
-		Optional<Order> orders = orderRepository.findById(id);
-		return orders.get();
+		Optional<Order> order = orderRepository.findById(id);
+		return order.get();
 	}
 }
